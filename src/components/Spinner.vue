@@ -1,5 +1,5 @@
 <template>
-  <div class="animate-spin h-5 w-5 rounded-full border-t-2 border-red-400">
+  <div class="justify-self-center mt-10 animate-spin h-10 w-10 rounded-full border-t-2 border-red-400">
   </div>
 </template>
 

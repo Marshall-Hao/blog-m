@@ -1,10 +1,11 @@
 <template>
-  <div class="home">
+  <div class="p-5 mt-5 grid">
     <div v-if="error">{{ error }}</div>
     <div v-if="posts.length">
+    <p class="text-4xl font-bold tracking-wider mb-5">Home</p>
       <PostList :posts="posts" />
     </div>
-    <div v-else>
+    <div v-else class="justify-self-center">
       <Spinner />
     </div>
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <form class="justify-self-center space-y-4 mt-10 p-5 w-3/5">
+  <form class="justify-self-center space-y-4 mt-10 p-5 w-3/5" @submit.prevent="createPost">
     <label class="block relative text-lg text-white font-normal w-2/12">Title:</label>
     <input class="block w-full text-lg font-normal border-solid border border-gray-200 focus:outline-none" type="text" required v-model="title">
     <label class="block relative text-lg text-white font-normal w-3/12">Content:</label>
@@ -34,8 +34,22 @@ export default {
             }
             tag.value = ''
         }
+        
+       const createPost = async () => {
+           const post = { 
+               title: title.value,
+               body: body.value,
+               tags: tags.value
+           }
 
-        return { title, body, tag, handleKeydown, tags }
+           await fetch('http://localhost:3000/posts',{
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(post)
+            })
+       }
+
+        return { title, body, tag, handleKeydown, tags, createPost }
     }
 }
 </script>
