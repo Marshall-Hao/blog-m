@@ -2,7 +2,7 @@
 <template>
   <div class="post mb-10">
     <router-link :to="{ name: 'Details', params:{ id:post.id }}">
-        <p class="text-xl font-bold text-white mb-10 label relative w-3/6">{{ post.title }}</p>
+        <p class="text-xl font-bold text-white mb-10 label relative w-2/5">{{ post.title }}</p>
     </router-link>
     <p class="text-sm font-medium mb-2">{{ snippet }}</p>
     <span v-for="tag in post.tags" :key="tag" class="text-sm font-medium">

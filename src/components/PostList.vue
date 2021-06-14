@@ -1,5 +1,5 @@
 <template>
-  <div class="post-list">
+  <div class="post-list w-3/4">
     <div v-for="post in posts" :key="post.id">
       <SinglePost :post="post" />
     </div>
