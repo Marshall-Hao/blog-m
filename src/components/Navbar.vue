@@ -15,5 +15,7 @@ export default {
 </script>
 
 <style>
-
+a.router-link-exact-active {
+  color: gray;
+}
 </style>
