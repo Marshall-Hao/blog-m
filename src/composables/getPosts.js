@@ -22,6 +22,7 @@ const getPosts = () => {
         posts.value = res.docs.map(doc => {
           return { ...doc.data(), id: doc.id}
         })
+        console.log(post.value)
       }
       catch(err) {
         error.value = err.message
